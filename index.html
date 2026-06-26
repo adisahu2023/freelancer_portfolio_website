@@ -6,6 +6,7 @@
   <meta name="description" content="Aditya Sahu — Freelance Full Stack Java Developer">
   <title>Aditya Sahu | Full Stack Java Developer</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="light">
   <div class="page">
@@ -78,7 +79,7 @@
           <article class="reason-card"><span class="reason-icon">▯</span><h3>Responsive Design</h3><p>Mobile-first &amp;<br>fully responsive</p></article>
           <article class="reason-card"><span class="reason-icon">🚀</span><h3>Fast Delivery</h3><p>On-time delivery<br>guaranteed</p></article>
           <article class="reason-card"><span class="reason-icon">↗</span><h3>SEO Friendly</h3><p>Search engine<br>optimized</p></article>
-          <article class="reason-card"><span class="reason-icon">♬</span><h3>24/7 Support</h3><p>Always available<br>for you</p></article>
+          <article class="reason-card"><span class="reason-icon"><i class="fas fa-headset"></i></span><h3>24/7 Support</h3><p>Always available<br>for you</p></article>
           <article class="reason-card"><span class="reason-icon">☺</span><h3>Client Satisfaction</h3><p>100% client<br>satisfaction</p></article>
         </div>
 
@@ -186,7 +187,7 @@
           <svg class="project-icon" viewBox="0 0 96 76"><path d="M48 66V18c0-8-12-14-19-6-10-2-15 9-10 16-8 5-5 17 3 19-2 9 10 16 18 10m8 9V18c0-8 12-14 19-6 10-2 15 9 10 16 8 5 5 17-3 19 2 9-10 16-18 10M29 12c-1 8 5 11 11 11M19 28c6-2 12 1 14 7m-11 12c7-3 13 0 16 6m29-41c1 8-5 11-11 11m21 5c-6-2-12 1-14 7m11 12c-7-3-13 0-16 6"/></svg>
           <h3>Digital Mental Health and<br>Psychological Support System</h3>
           <p>A platform to provide mental health support and resources.</p>
-          <button class="project-button" type="button">View Details</button>
+          <button class="project-button" type="button"> <a href="https://final-year-project-vkk6.onrender.com/">View Details</a></button>
         </article>
 
         <article class="project-card" data-category="web">
@@ -247,35 +248,9 @@
 
         <div class="clients-panel" id="testimonials">
           <h2 class="section-title">What Clients Say</h2>
-          <div class="testimonial-list">
-            <article class="testimonial-card">
-              <div class="client-avatar" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"/></svg>
-              </div>
-              <div>
-                <div class="rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>Excellent work! Aditya delivered the project on time with great quality and professionalism.</p>
-                <strong>Rahul Sharma</strong>
-                <span>Business Owner</span>
-              </div>
-              <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="client-avatar" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"/></svg>
-              </div>
-              <div>
-                <div class="rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>Very professional and skilled developer. Highly recommended!</p>
-                <strong>Neha Verma</strong>
-                <span>Startup Founder</span>
-              </div>
-              <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-            </article>
+          <div class="testimonial-shell" aria-label="Client testimonials">
+            <div class="testimonial-list" id="testimonialList"></div>
           </div>
-
-          
         </div>
       </div>
     </section>
@@ -313,10 +288,7 @@
               <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg></span>
               <span>India</span>
             </li>
-            <li>
-              <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v5.1l3.4 2.02-1 1.72L11 13.2V7h2Z"/></svg></span>
-              <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
-            </li>
+           
           </ul>
 
           <div class="footer-social-wrap">
@@ -400,6 +372,125 @@
         });
       });
     });
+
+    const testimonials = [
+      {
+        name: "Rahul Sharma",
+        role: "Founder, UrbanKart",
+        review: "Aditya built a clean business website for us with fast loading pages and a polished mobile experience. Communication was clear from day one."
+      },
+      {
+        name: "Neha Verma",
+        role: "Startup Founder",
+        review: "Very professional and skilled developer. He understood the requirement quickly, suggested practical improvements, and delivered exactly what we needed."
+      },
+      {
+        name: "Amit Patel",
+        role: "Operations Manager, FinTrack",
+        review: "The dashboard he developed made our daily reporting much easier. The code quality was solid and the handover was smooth."
+      },
+      {
+        name: "Sneha Kulkarni",
+        role: "Director, EduBridge Classes",
+        review: "Our portfolio and enquiry flow now feels modern and reliable. Aditya handled every revision patiently and kept the design consistent."
+      },
+      {
+        name: "Karan Mehta",
+        role: "Owner, Mehta Retail",
+        review: "Excellent work on the backend APIs and database structure. The application is faster, easier to maintain, and ready for future features."
+      },
+      {
+        name: "Priya Nair",
+        role: "Product Lead, HealthMate",
+        review: "He created a responsive interface that feels simple for users but still covers all important workflows. Great attention to detail."
+      },
+      {
+        name: "Vikram Joshi",
+        role: "Co-Founder, LegalDesk Pro",
+        review: "Aditya fixed long-standing bugs in our Java application and improved stability without disrupting the existing system."
+      },
+      {
+        name: "Anjali Deshmukh",
+        role: "Marketing Consultant",
+        review: "The landing page looks professional and loads quickly. I appreciated the clean structure and how easy it is to update content now."
+      },
+      {
+        name: "Rohit Jain",
+        role: "CTO, CloudLedger",
+        review: "Reliable, responsive, and technically strong. He delivered a secure Spring Boot module with clear documentation for our team."
+      },
+      {
+        name: "Meera Iyer",
+        role: "Founder, StudioM",
+        review: "The final website feels premium and matches our brand perfectly. The enquiry form and testimonials section helped us build more trust."
+      }
+    ];
+
+    const testimonialList = document.getElementById("testimonialList");
+    const avatarPath = "M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z";
+
+    const getInitials = name => name
+      .split(" ")
+      .map(part => part[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+
+    const renderTestimonials = () => {
+      if (!testimonialList) return;
+
+      const fragment = document.createDocumentFragment();
+
+      testimonials.forEach((testimonial, index) => {
+        const card = document.createElement("article");
+        card.className = "testimonial-card";
+        card.style.animationDelay = `${index * 70}ms`;
+
+        const avatar = document.createElement("div");
+        avatar.className = "client-avatar";
+        avatar.setAttribute("aria-label", `${testimonial.name} avatar`);
+        avatar.setAttribute("title", getInitials(testimonial.name));
+
+        const avatarSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        avatarSvg.setAttribute("viewBox", "0 0 24 24");
+        avatarSvg.setAttribute("aria-hidden", "true");
+
+        const avatarIcon = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        avatarIcon.setAttribute("d", avatarPath);
+        avatarSvg.appendChild(avatarIcon);
+        avatar.appendChild(avatarSvg);
+
+        const content = document.createElement("div");
+
+        const rating = document.createElement("div");
+        rating.className = "rating";
+        rating.setAttribute("aria-label", "5 out of 5 stars");
+        rating.textContent = "\u2605\u2605\u2605\u2605\u2605";
+
+        const review = document.createElement("p");
+        review.textContent = testimonial.review;
+
+        const name = document.createElement("strong");
+        name.textContent = testimonial.name;
+
+        const role = document.createElement("span");
+        role.className = "client-role";
+        role.textContent = testimonial.role;
+
+        const quote = document.createElement("span");
+        quote.className = "quote-mark";
+        quote.setAttribute("aria-hidden", "true");
+        quote.textContent = "\u201c";
+
+        content.append(rating, review, name, role);
+        card.append(avatar, content, quote);
+        fragment.appendChild(card);
+      });
+
+      testimonialList.appendChild(fragment);
+    };
+
+    renderTestimonials();
 
    
   </script>
